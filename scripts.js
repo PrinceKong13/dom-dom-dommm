@@ -66,8 +66,7 @@ function evenOrOdd() {
         if (squares[i] == undefined) {
           alert("No valid target");
           break;
-        } else
-        squares[i].remove();
+        } else squares[i].remove();
       }
     }
   } else if (event.target.id % 2 === 1) {
@@ -77,9 +76,7 @@ function evenOrOdd() {
         if (squares[i] == undefined) {
           alert("No valid target");
           break;
-        } else
-        squares[i].remove();
-        
+        } else squares[i].remove();
       }
     }
   }
