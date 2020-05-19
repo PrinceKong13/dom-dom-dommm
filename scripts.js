@@ -57,9 +57,27 @@ function changeColors() {
 }
 
 function evenOrOdd() {
+  let squares = document.getElementsByClassName("black-square");
+
   if (event.target.id % 2 === 0) {
-    let targetId = event.target.id;
-    let targetSquare = document.getElementById(targetId + 1);
-    targetSquare.remove();
+    for (let i = 0; i < squares.length; i++) {
+      if (squares[i] === event.target) {
+        ++i;
+        squares[i].remove();
+      }
+    }
+  } else if (event.target.id % 2 === 1) {
+    for (let i = 0; i < squares.length; i++) {
+      if (squares[i] === event.target) {
+        --i;
+        squares[i].remove();
+      }
+    }
+  }
+}
+for (let i = 0; i < squares.length; i++) {
+  if (squares[i] === event.target) {
+    ++i;
+    squares[i].remove();
   }
 }
