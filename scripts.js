@@ -63,6 +63,10 @@ function evenOrOdd() {
     for (let i = 0; i < squares.length; i++) {
       if (squares[i] === event.target) {
         ++i;
+        if (squares[i] == undefined) {
+          alert("No valid target");
+          break;
+        } else
         squares[i].remove();
       }
     }
@@ -70,7 +74,12 @@ function evenOrOdd() {
     for (let i = 0; i < squares.length; i++) {
       if (squares[i] === event.target) {
         --i;
+        if (squares[i] == undefined) {
+          alert("No valid target");
+          break;
+        } else
         squares[i].remove();
+        
       }
     }
   }
